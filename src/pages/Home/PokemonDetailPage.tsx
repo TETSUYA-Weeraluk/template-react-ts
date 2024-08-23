@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { RootState, useAppDispatch } from "../../store";
-import { useNavigate, useParams } from "react-router-dom";
+import { RootState } from "../../store";
 import { fetchPokemonById } from "../../store/reducer/homeSlice";
 import { Button } from "@mui/joy";
+import { useAppDispatch, useAppSelector } from "../../store/hook";
+import { useNavigate, useParams } from "react-router-dom";
 
 const PokemonDetailPage = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { pokemonById, loading } = useSelector(
+  const { pokemonById, loading } = useAppSelector(
     (state: RootState) => state.home
   );
   const { name } = useParams<{ name: string }>();
