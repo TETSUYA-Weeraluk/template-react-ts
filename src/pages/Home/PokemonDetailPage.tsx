@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../store";
 import { useNavigate, useParams } from "react-router-dom";
-import { fetchPokemonById } from "../../store/homeSlice";
+import { fetchPokemonById } from "../../store/reducer/homeSlice";
 import { Button } from "@mui/joy";
 
 const PokemonDetailPage = () => {

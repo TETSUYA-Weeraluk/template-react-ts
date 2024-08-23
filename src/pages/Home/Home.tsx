@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../store";
 import { useEffect, useState } from "react";
-import { fetchPokemon, welcomeToHomePage } from "../../store/homeSlice";
+import { fetchPokemon, welcomeToHomePage } from "../../store/reducer/homeSlice";
 import { Button, Input } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
 
