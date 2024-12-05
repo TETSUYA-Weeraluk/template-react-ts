@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { RootState } from "../../store";
-import { fetchPokemonById } from "../../store/reducer/homeSlice";
 import { Button } from "@mui/joy";
 import { useAppDispatch, useAppSelector } from "../../store/hook";
 import { useNavigate, useParams } from "react-router-dom";
+import { fetchPokemonById } from "../../store/reducer/home/homeThunk";
 
 const PokemonDetailPage = () => {
   const dispatch = useAppDispatch();
