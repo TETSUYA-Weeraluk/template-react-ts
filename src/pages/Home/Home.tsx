@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { useEffect, useState } from "react";
-import { fetchPokemon, welcomeToHomePage } from "../../store/reducer/homeSlice";
+import { welcomeToHomePage } from "../../store/reducer/home/homeSlice";
 import { Button, Input } from "@mui/joy";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../store/hook";
+import { fetchPokemon } from "../../store/reducer/home/homeThunk";
 
 export default function Home() {
   const navigate = useNavigate();
