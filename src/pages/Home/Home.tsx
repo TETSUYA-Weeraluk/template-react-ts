@@ -13,10 +13,14 @@ export default function Home() {
   const welcomeText = useSelector((state: RootState) => state.home.welcomeText);
   const pokemons = useSelector((state: RootState) => state.home.pokemon);
   const [inputWelcomeText, setInputWelcomeText] = useState("");
+  const [paramsPagination, setParamsPagination] = useState({
+    limit: 15,
+    page: 0,
+  });
 
   useEffect(() => {
-    dispatch(fetchPokemon({ limit: 15, page: 0 }));
-  }, [dispatch]);
+    dispatch(fetchPokemon(paramsPagination));
+  }, [dispatch, paramsPagination]);
 
   const changeWelcomeTextWithInput = () => {
     dispatch(welcomeToHomePage(inputWelcomeText));
